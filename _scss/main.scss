@@ -1,0 +1,264 @@
+@import "reset";
+@import "syntax";
+@import 'typecastscale';
+@import 'visibility';
+@import 'lity';
+
+// Import fonts from Google
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,800);
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display&text=Kelly);
+
+$base-color: #2b244f;
+$base-light: #d4b9ca;
+$base-red: #ea6576;
+$base-orange: #fdac53;
+$base-purple: #946ca8;
+$base-green: #349c5f;
+
+
+html{
+  box-sizing: border-box;
+}
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background: white;
+  font-family: 'Ampersand', 'Lora', 'Garamond', 'Baskerville', 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', 'serif';
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+
+
+.site a {
+  color: $base-red;
+  font-weight: 600;
+  text-decoration: none;
+  
+  display: inline-block;
+  position: relative;
+  transition: all .3s ease;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    left: 0;
+    bottom: .125em;
+    height: 1px;
+    background: linear-gradient(90deg, #009688 0%, #002bff 50%, #ff00fe 100%);
+    transition: all .3s ease;
+  }
+  &:hover {
+    color: darken($base-red, 15%);
+    &::after {
+      bottom: 0;
+      background: linear-gradient(90deg, #ff00fe 0%, #009688 50%,  #002bff 100%);
+    }
+  }
+}
+
+
+blockquote{
+  margin-left: -40px;
+  padding-left: 30px;
+  border-left: 3px solid #ccc;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+ul.noList{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container{
+  max-width: 610px;
+  margin: 0 auto;
+  @media only screen and (min-width: 850px){
+    max-width: 800px;
+  }
+}
+
+.portfolio-item{
+  @media only screen and (min-width: 960px){
+    max-width: 950px;
+  }
+}
+
+
+/* Header */
+header{
+  background-image: url('../img/annie-spratt-40664.jpg');
+  background-color: $base-color;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  position: relative;
+  a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    z-index: 5;
+    padding: 2px;
+    &:before{
+      position:absolute;
+      top: 0; left: 0; bottom: 0; right: 100%;
+      background: rgba($base-purple, .8);
+      z-index: -1;
+      content: '';
+      transition: right .5s;
+    }
+    &:hover:before{ right: 0; }
+  }
+  .container{
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+  }
+  svg {
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+  }
+}
+nav ul{
+  display: flex;
+  xjustify-content: space-between;
+  li{
+    padding: 10px;
+  }
+  li:first-child{
+    padding-left: 0;
+  }
+}
+
+
+.site{
+  padding-top: 2rem;
+  @media only screen and (min-width: 960px){
+    padding-top: 5rem;
+  }
+}
+
+
+
+.post-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    border-bottom: 0px;
+  }
+  
+  a:after {
+    display: none;
+  }
+  a:hover img{
+    opacity: 1;
+  }
+  li {
+    flex: 0 0 45%;
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 1.25em;
+    text-align: center;
+  }
+  img{
+    opacity: .7;
+  }
+}
+@import 'modules/portfolio';
+@import 'modules/gallery';
+
+
+
+
+/*
+footer{
+  display: flex;
+  flex-direction: column;
+  
+  svg {
+    width: 100%;
+    polygon{
+      fill: $base-color;
+      background-color: white;
+    }
+    
+  }
+  .contact{
+    background-color: $base-color;
+    margin-top: -2px;
+  }
+
+}
+*/
+
+
+footer{
+  position: relative;
+  background-color: $base-purple;
+  padding: 100px;
+  margin-top: 100px;
+  color: white;
+  display: flex;
+  justify-content:center;
+  font-size: 2em;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  &:before{
+    transform: skewY(-3deg);
+    height: 90px;
+    width: 100%;
+    content: "";
+    top: -46px;
+    left: 0;
+    background: $base-purple;
+    position: absolute;
+  }
+  svg{
+    display: none;
+  }
+  .myemail{
+    font-size: 1.5rem;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+    transition: all .5s;
+
+      &:hover{ color: $base-color; }
+  }
+  .contact-icons a{
+    padding: 2px;
+    font-size: 2.25em;
+    padding: 10px;
+    display: inline-block;
+  }
+}
+
+
+
+
+@font-face {
+    font-family: 'Ampersand';
+    src: local('Playfair Display'), local('Lora');
+    unicode-range: U+26;
+}

@@ -1,0 +1,49 @@
+name: Kelly Anne Pipe
+description: Web Design and Development
+
+url: https://kellyannepipe.me
+baseurl: ""
+paginate_path: "blog/page:num/"
+permalink: blog/:title/
+
+gems: [jekyll-paginate]
+paginate: 5
+
+markdown: kramdown
+kramdown: 
+  syntax_highlighter_opts:
+    disable: true
+
+navigation:
+ - title: Home
+   url: /index.html
+ - title: About
+   url: /about
+ - title: Contact
+   url: /contact
+
+social:
+   github: kellygrape
+   twitter: kellygrape
+   facebook: kellygrape
+   email: hello@kellyannepipe.me
+
+exclude: ["node_modules", "gulpfile.js", "package.json"]
+
+
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      categories: [ "writing" ]
+      permalink: /writing/:title.html
+  -
+    scope:
+      path: "works"
+      type: "posts"
+    values:
+      categories: [ "works" ]
+      permalink: /works/:title.html

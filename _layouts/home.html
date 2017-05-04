@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{ "/css/prism.css" | prepend: site.baseurl }}">
+        
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+<body>
+  {% include header.html %}
+        <div class="site container">
+
+
+          {{ content }}
+
+<!--
+          <section class="posts-area">
+            <h1>Recent Posts</h1>
+            <ul class="posts">
+              {% for post in site.posts %}
+              {post}
+                <li class="post"><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </section>
+-->
+          <h1>Portfolio</h1>
+          <ul class="post-list">
+            {% for post in site.categories.works %}
+              <li>
+                
+                <h2>
+                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><img class="portfolio-item-image" src="{{ post.featimg }}">{{ post.title }}</a>
+                </h2>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+  {% include footer.html %}
+
+  <script src="{{ "/js/prism.js" | prepend: site.baseurl }}"></script>
+  
+</body>
+</html>

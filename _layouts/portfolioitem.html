@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<div class="site container portfolio-item">
+  
+<div class="post">
+  <aside class="portfolio-item-info">
+    <img src="/{{ page.featimg }}">
+    
+    
+    
+    <div class="info-callout">
+      <h2 class="mobile-only">{{ page.title }}</h2>
+      <h3 class="accent mobile-only">{{ page.subtitle }}</h3>
+      
+      <h4 class="smallbottom"><strong>Details</strong></h4>
+      
+      <p><strong>Languages and Tech</strong><br>
+        <span>{{ page.tech }}</span>
+      </p>
+      <p><strong>Project Date</strong><br>
+        <span>{{page.timespan}}</span>
+      </p>
+      <p><strong>Project Link</strong><br>
+        <span class="link-wrapper">
+        <a class="stylized-link" href="{{page.livelink}}"><i class="fa fa-globe"></i> Website</a>
+        </span>
+      </p>
+    </div>
+    
+    
+  </aside>
+  <section class="portfolio-item-text">
+    <h2 class="desktop-only">{{ page.title }}</h2>
+    <h3 class="accent desktop-only">{{ page.subtitle }}</h3>
+
+
+    {{ content }}
+  </section>
+</div>
+
+</div>
+

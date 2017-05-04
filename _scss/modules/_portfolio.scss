@@ -1,0 +1,36 @@
+/* Portfolio items */
+
+.portfolio-item{
+  padding: 20px;
+  @media (min-width: 768px) {
+  .post{
+    display: flex;
+  }
+  aside{
+    flex: 0 0 30%;
+    padding: 30px;
+  }
+  .portfolio-item-text{
+    flex: 1 0 70%;
+    width: 70%;
+  }
+  }
+}
+
+.info-callout{
+  background-color: #efefef;
+  border: 1px solid darken(#efefef, 10%);
+  padding: 20px;
+  h1, h2, h3{
+    color: $base-color;
+  }
+  h4{
+    border-bottom: 1px solid #999;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+  }
+  p{
+    font-size: .8rem;
+  }
+}
+
