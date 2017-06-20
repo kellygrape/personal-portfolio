@@ -1,29 +1,18 @@
 ---
 layout: portfolioitem
-title: "University Homepage Redesign"
-date: "2016-06-01"
+title: "SJU Magazines"
+date: "2017-03-01"
 featimg: "img/portfolio/sjumagazines.png"
-subtitle: "Design and layout, UX and User Testing, Information Architecture, Project Management, Development (HTML/CSS/JS/PHP)"
-tech: "HTML, CSS, PHP, Javascript, Drupal"
-livelink: "https://www.sju.edu"
-timespan: "Summer 2016"
+subtitle: "Design and layout, content management, web branding"
+tech: "Wordpress, Beaver Builder, HTML and CSS"
+livelink: "https://sites.sju.edu/magazine"
+timespan: "Fall 2016"
 categories: [works]
 tags: 
 ---
 
 
-As part of ongoing improvements to the Saint Joseph's University website, in the Summer of 2016 I played a pivotal role in a large-scale project for the re-architecture of the main website navigation.
-
-My team was tasked by the president of the university to "Fix the Website".  At that time, my team had been discussing some plans to make some larger-scale improvements to the design of some top-level pages and especially to the main site navigation, so we took advantage of this directive to begin implementing these ideas.
-
-Because I work on such a small team, I had a hand in every aspect of this project - from content management through design, development, and into user testing and roll-out.
-
-## New Navigation
-
-
-
-
-This project heavily utilizes one of my favorite Wordpress plugins, [Advanced Custom Fields](https://www.advancedcustomfields.com/).  I utilized Roots as a starting theme, customizing some of the standard Bootstrap colors and styling.
+The Online version of our magazine is built using the Beaver Builder theme and plugin, allowing for page-level customization.  This approach was taken to allow our designers to easily adjust the layout for specific featured articles, as needed.
 
 ## Custom Article Layouts
 
