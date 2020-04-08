@@ -1,7 +1,7 @@
 name: Kelly Anne Pipe
 description: Web Design and Development
 
-url: https://kellyannepipe.me
+url: https://kellyanne.dev
 baseurl: ""
 paginate_path: "blog/page:num/"
 permalink: blog/:title/
@@ -24,7 +24,7 @@ social:
    github: kellygrape
    twitter: kellygrape
    facebook: kellygrape
-   email: hello@kellyannepipe.me
+   email: kellyanne.pipe@gmail.com
 
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 
